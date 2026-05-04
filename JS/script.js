@@ -47,11 +47,11 @@ console.log(h2.classList.contains("red")); // при наличии класса
 // "переключатель" классов
 for (let elem of paragraphs){
     // elem.classList.toggle("text"); // toggle - переключатель
-    // if(elem.classList.contains("text")){ // переключатель, но длиннее
-    //     elem.classList.remove("text");
-    // } else{
-    //     elem.classList.add("text");
-    // }
+    if(elem.classList.contains("text")){ // переключатель, но длиннее
+        elem.classList.remove("text");
+    } else{
+        elem.classList.add("text");
+    }
 }
 
 
@@ -116,3 +116,13 @@ btn.addEventListener("click", function(event){
     const pass = document.querySelector("input[type=password]").value; // value - то что поьзователь введет
     console.log(pass);
 }); // добавить слушатель событий - браузер следит за кнопкой
+
+
+// 10 удаление тегов
+// живая коллекция 
+const texts = document.querySelector('.content').childNodes;
+console.log(texts);
+const p1 = document.querySelector('p'); // выбираю первый параграф в документе
+p1.outerHTML = ""; // приравнимаем к пустоте
+console.log(paragraphs);
+console.log(texts);
