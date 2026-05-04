@@ -1,0 +1,31 @@
+.big:hover{
+    color: purple;
+    background: orange;
+    font-size: xx-large;
+}
+
+.ballon{
+    animation-name: ballon;
+    display: flex;
+    flex-direction: column;
+    animation: ballon linear 10s ;
+    animation-play-state: paused;
+}
+
+
+@keyframes ballon{
+    0%{
+        transform: scaleY(1) translateY(0);
+    }
+
+    50%{
+        transform: translateY(-600px) scale(0.1);
+    }
+
+    100%{
+        transform: translateY(-100px) scale(0.2);
+    }
+}
+svg .ballon{
+    animation-play-state: running;
+}
